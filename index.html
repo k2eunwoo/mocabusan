@@ -14,13 +14,19 @@
 
 <link rel="stylesheet" type="text/css" href="./css/slick.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.0.js"></script>
+<!-- 하위버전도 작동하게 하는 제이쿼리 -->
 <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- 슬릭 플러그인 -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+<!--메인슬라이드 플러그인-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!--날짜픽커-->
 <script src="./js/main.js"></script>
+
 </head>
 
 
@@ -179,16 +185,19 @@
 
     <div class="search">
       <div class="inner">
-        <select name="date">
-          <option value=></option>
-        </select>
-        <div class="search_bar">
-          <select class="price">
-            <option value=>무료전시</option>
-            <option value=>유료전시</option>
-          </select>
-          <input type="search" placeholder="찾으시려는 전시명을 입력해주세요."><button>GO!</button></input>
+        <div class="select">
+          <div class="d_picker">
+            <div><input type="text" id="datepicker"></div>
+           </div>
+           <div class="search_bar">
+             <select class="price">
+               <option value=>무료전시</option>
+               <option value=>유료전시</option>
+             </select>
+             <input type="search" placeholder="전시 제목이나 내용을 입력해주세요."><button>GO!</button>
+           </div>
         </div>
+       
       </div>
 </div>
      
@@ -200,11 +209,18 @@
       <h2 class="title">온라인미술관</h2>
         <div class="box">
           <div class="slider-nav slider">
-            <div><img src="images/post_06.jpg"></div>
-            <div><img src="images/post_06.jpg"></div>
-            <div><img src="images/post_06.jpg"></div>
+            <div><img src="images/post_04.jpg"></div>
+            <div><img src="images/post_05.jpg"></div>
+            <div><img src="images/post_07.jpg"></div>
           </div>
           <div class="slider-for slider">
+            <div>
+              <h4>[오디오] 《경이로운 전환》</h4>
+              <p class="date">기간: 2022. 04. 18 ~ 2022. 08. 05</p>
+              <p>어떤 위기가 시대적 조건을 통해 다른 위기를 강화함으로써 변화ㆍ상승해나가는 세계의 운동과 그에 따른 인간의 변화ㆍ하강 구조를 감각ㆍ인식하게 하는 전시<br><br>
+              참여작가: 강민기, 강태훈, 권은비, 김정근, 이승훈, 임영주, 저우위정, 호루이안
+              </p>
+            </div>
             <div>
               <h4>[오디오]  Tobias REHBERGER 
                 《Your self is sometimes a place to call your own》
@@ -218,17 +234,12 @@
               </p>
             </div>
             <div>
-              <h4>Tobias REHBERGER 
-                《Your self is sometimes a place to call your own</h4>
-              <p class="date">전시기간</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and  essentially unchanged.
-              </p>
-            </div>
-            <div>
-              <h4>Tobias REHBERGER 
-                《Your self is sometimes a place to call your own</h4>
-              <p class="date">전시기간</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and  essentially unchanged.
+              <h4>[VR] 개인들의 사회</h4>
+              <p class="date">기간: 2022. 05. 30 ~ 2022. 09. 20</p>
+              <p>
+                우리 시대 개인들이 처한 다양한 모습을 통해 우리가 살아가고 있는 오늘날의 사회란 어떤 모습인지 생각해보는 주제의 기획전시 입니다.<br>
+                <br>
+                참여작가: 송세진, 하룬 파로키, 마이클 맨디버그, 류성실, 임봉호, 서평주, 손혜경, 이우성
               </p>
             </div>
           </div>
@@ -322,9 +333,11 @@
             </section>
           </div>
         </div>
-        <div class="map">
+        <div class="map2">
           <p class="title">오시는길</p>
-          <div id="map" style="width:100%;height:400px;"></div>
+          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=92cb805b71f02e360ef8dea57f5346a7"></script>
+          <div id="map" style="width:100%;height:400px;">
+          </div><!--map-->
         </div>
       </div><!--sec4 all-->
     </div><!--inner-->
@@ -350,7 +363,9 @@
                 <div class="mail">
                   <input type="text" placeholder="이메일 주소 입력 (예: 아이디 @ naver.com)">
                 </div>
+                <div><button class="send" name="letter_form" >구독신청하기</button></div>
               </div><!--form-->
+              
           </div>
       </div><!--sec5 all-->
     </div><!--inner-->
