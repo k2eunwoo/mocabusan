@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*googleips 웹폰트 css 파일 불러오기*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* 저장된 글꼴 파일 선언*/
+@font-face { font-family :NotoSansKR;  font-weight:300;  
+                src : url(../font/NotoSansKR-Regular.woff);} 
+@font-face { font-family :NotoSansKR-bold;  font-weight:600;  
+                  src : url(../font/NotoSansKR-bold.woff);} 
+@font-face { font-family :poppins-extrabold;  font-weight:600;  
+                  src : url(../font/Poppins-ExtraBold.woff);}         
+ @font-face { font-family :poppins;  font-weight:400;  
+                        src : url(../font/Poppins-Medium.woff);}                 
+              
+
+            
+* {margin:0; padding:0;}
+html{font-size:16px;}
+body{ font-size:16px;
+      color:#0F0F10;
+      font-family: 'NotoSansKR', sans-serif;}
+.inner {width:100%; max-width:1440px; min-width:1300; margin: 0 auto;}
+ul, ol, li{list-style-type:none}
+img, fieldset{border:none;vertical-align: middle}
+/* vertical-align은 html 입력 시 자동으로 나오는 텍스트 위치를 지정해줌. */
+/* hr 수평선 만드는 태그 */
+hr {clear:both;border:none}
+a {color:inherit;text-decoration:none}
+table{border-collapse:collapse}
+input, textarea {
+       color:inherit;font-size:inherit;
+       font-family:inherit;
+       vertical-align: middle;}
+button{outline:0}
+.title {font-family:NotoSansKR-bold;font-weight:600;font-size: 2rem;color:}
+
