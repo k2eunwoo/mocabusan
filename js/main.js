@@ -154,12 +154,18 @@ $(".lazy3").slick({
 });
 
 // 카카오맵 지도 api
-var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng('4W5V'+'P4', 부산광역시),
-			level: 3
-		};
-		var map = new kakao.maps.Map(container, options);
- 
+var map;
+var mapContainer;
+
+window.onload = function() { 	
+	mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	mapOption = {
+		center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+		level: 3 // 지도의 확대 레벨
+	};  
+
+	// 지도를 생성합니다    
+	map = new kakao.maps.Map(mapContainer, mapOption); 
+}
 })//ready
 
