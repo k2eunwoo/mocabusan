@@ -39,7 +39,7 @@ $(function(){
   //  전시슬라이드
   var swiper = new Swiper(".mySwiper", {
     loop:false,
-    slidesPerView: 3.4,
+    slidesPerView: 4.8,
     arrows: true,
     autoplay:false,
     spaceBetween: 50,
@@ -143,6 +143,7 @@ $(function(){
      }
           //클릭수만큼 li 보이기
       $('.more').click(function(){
+
       click_count += 1;
       //alert(Math.ceil(li_count/4));
       if(Math.ceil(li_count/2) > click_count){
@@ -150,12 +151,15 @@ $(function(){
         li_show(click_count)
       }else if(Math.ceil(li_count/2) == click_count) {
         li_show(click_count)
-        $('.more').text('접기');     
+        $('.more').text('접기').css({"background-image":"url(icon/ic_fold.png)"}); 
+
       } else {
         $('.thum_list li').hide()
         click_count = 1;     
-        $('.more').text('더보기');
-        li_show(click_count)
+        $('.more').text('더보기').css({"background-image":"url(icon/ic_drop2.png)"}).hover({"background-image":"url(icon/ic_drop2.png)"});
+        li_show(click_count);
+        
+       
         }
       })
     })//전체
