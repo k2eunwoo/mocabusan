@@ -24,7 +24,8 @@
 <!-- 슬릭 플러그인 -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
 <!--메인슬라이드 플러그인-->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!--날짜픽커-->
+<script src="js/jquery-ui.js"></script> 
+<!--날짜픽커-->
 <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=92cb805b71f02e360ef8dea57f5346a7"></script>
 <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
 <!-- 카카오맵 api + 라이브러리 설치파일 -->
@@ -40,11 +41,86 @@
       <h1><a href="#"><img src= "images/mocalogo_02_w.png" alt="홈으로 돌아가는 logo 버튼"></a></h1>
       <nav class="menu">
         <ul>
-          <li><a href="#"><img src="icon/ic_lang_ko.svg"><span>언어선택</span></a></li>
-          <li><a href="#"><img src="icon/ic_login.svg"><span>언어선택</span></a></li>
-          <li><a href="#"><img src="icon/ic_menu.svg"><span>언어선택</span></a></li>
+          <li class="icon"><a href="#" ><img src="icon/ic_lang_ko.svg"><span>언어선택</span></a></li>
+          <li class="icon"><a href="#" ><img src="icon/ic_login.svg"><span>언어선택</span></a></li>
+          <li class="icon">
+            <div><a href="#" class="modal"><img src="icon/ic_menu.svg"></a></div>
+              <div id="pop_up">
+                <div class="img">
+                  <div class="nav_logo"><img src="images/mocalogo_02.png"></div>
+                  <div class="btn"><button><span>닫기</span></button></div>
+                  <div class="nav-accod">
+                    <dl class="user"><!--user login 시작-->
+                        <div><a href="#" class="pro"></a>
+                        <dd><a href="#">LOGIN</a></dd>
+                        <dd class="border">로그인 후 이용하실 수 있습니다.</dd>
+                        </div>
+                      <dt><a href="#">FAQ</a></dt>
+                      <dt><a href="#">Q&A</a></dt>
+                    </dl><!--user login 끝-->
+
+                    <!--nav 아코디언 시작-->
+                    <dl class="accordion nav_left"> 
+                    <dt class="active">MOCA BUSAN</dt>
+                      <dd>
+                        <a href="#">연혁</a>
+                        <a href="#">조직도</a>
+                        <a href="#">관련법령</a>
+                      </dd>
+                    <dt>이용안내</dt>
+                    <dd>
+                      <a href="#">관람안내</a>
+                      <a href="#">층별안내</a>
+                      <a href="#">단체관람 안내</a>
+                      <a href="#">전시관람 안내</a>
+                      <a href="#">대관안내</a>
+                      <a href="#">오시는길</a>
+                    </dd>
+                    <dt>전시</dt>
+                    <dd>
+                      <a href="#">현재전시</a>
+                      <a href="#">예정전시</a>
+                      <a href="#">지난전시</a>
+                    </dd>
+                    <dt>교육프로그램</dt>
+                    <dd>
+                      <a href="#">프로그램</a>
+                      <a href="#">자료실</a>
+                    </dd>
+                  </dl><!-- 아코디언 왼쪽-->
+                  <dl class="accordion nav_right">
+                    <dt>소장품</dt>
+                    <dd>
+                      <a href="#">소장품 보기</a>
+                      <a href="#">모카이브</a>
+                    </dd>
+                    <dt>MOCA 소식</dt>
+                    <dd>
+                      <a href="#">공지사항</a>
+                    </dd>
+                    <dt>책그림섬</dt>
+                    <dd>
+                      <a href="#">소개</a>
+                      <a href="#">이용예약</a>
+                      <a href="#">프로그램</a>
+                      <a href="#">소식</a>
+                    </dd>
+                    <dt>온라인 예약</dt>
+                    <dd>
+                      <a href="#">견학/체험</a>
+                      <a href="#">강좌/교육</a>
+                      <a href="#">대관/대여</a>
+                      <a href="#">행사/모집</a>
+                      <a href="#">나의예약현황</a>
+                    </dd>
+                  </dl> <!-- 아코디언 오른쪽-->
+                </div><!--로그인창/nav-accord-->
+               </div><!--팝업 이미지, 팝업 이미지 위에 아코디언 네비게이션 항목이 보여야 하므로 popup_img 태그 내에 아코디언 태그를 넣어줌.-->
+              </div><!--팝업 끝-->
+              
+           </li>
         </ul>
-      </nav>
+      </nav>        
     </div>
   </header>  
   <section id="main">
@@ -58,7 +134,7 @@
               <p class="m_ko">지역과 예술,  그리고 세계와 미래를 연결하는 <br>동시대 미술의 장으로 여러분을 초대합니다.</p>
             </div>
             <div class="main_img">
-            <img src="images/main_01.png">
+            <img src="images/main_01.png" alt="메인이미지1">
           </div>
           </div>
             
@@ -71,7 +147,7 @@
             <p class="m_ko">오늘날의 혁신적인 기술변화가 가져온 인간 노동의 성격·형태·구조 변화와 <br> 기술자본의 욕망</p>
           </div>
           <div class="main_img">
-          <img src="images/main_02.png">
+          <img src="images/main_02.png" alt="메인이미지2">
           </div>
         </div>
       </div>
@@ -83,7 +159,7 @@
           <p class="m_ko">수직정원 연계 아카이브전<br>부산현대미술관 3층 모카이브</p>
         </div>
         <div class="main_img">
-        <img src="images/main_03.png">
+        <img src="images/main_03.png"  alt="메인이미지3">
         </div>
       </div>
     </div>
@@ -98,6 +174,10 @@
       <li><a href="#">책그린섬</li>
     </ul>
   </nav>
+
+  </div>
+  </div>    
+</div>
 </div>
 </section>
 
@@ -112,7 +192,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">     
             <a href="#">
-              <div class="img_box"><img src="images/post_01.jpg"></div>
+              <div class="img_box"><img src="images/post_01.jpg"  alt="전시포스터"></div>
               <h4 class="dp_tit">완벽한 기술 : Complete Technology</h4>
               <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
             </a>
@@ -120,7 +200,7 @@
           <div class="swiper-slide">
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_02.jpg"></div>
+                <div class="img_box"><img src="images/post_02.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">수직정원에 관한 N가지: 첫 번째 이야기 </h4>
                 <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
               </a>
@@ -129,7 +209,7 @@
           <div class="swiper-slide">
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_03.jpg"></div>
+                <div class="img_box"><img src="images/post_03.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">거의 정보가 없는 전시 </h4>
                 <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
               </a>
@@ -138,7 +218,7 @@
           <div class="swiper-slide">
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_04.jpg"></div>
+                <div class="img_box"><img src="images/post_04.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">새로운 매개들</h4>
                 <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
               </a>
@@ -147,7 +227,7 @@
           <div class="swiper-slide"> 
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_05.jpg"></div>
+                <div class="img_box"><img src="images/post_05.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">전시제목</h4>
                 <p class="date">날짜</p>
               </a>
@@ -156,7 +236,7 @@
           <div class="swiper-slide"> 
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_06.jpg"></div>
+                <div class="img_box"><img src="images/post_06.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">전시제목</h4>
                 <p class="date">날짜</p>
               </a>
@@ -165,7 +245,7 @@
           <div class="swiper-slide"> 
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_07.jpg"></div>
+                <div class="img_box"><img src="images/post_07.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">전시제목</h4>
                 <p class="date">날짜</p>
               </a>
@@ -174,7 +254,7 @@
           <div class="swiper-slide"> 
             <div class="swiper-slide">     
               <a href="#">
-                <div class="img_box"><img src="images/post_08.jpg"></div>
+                <div class="img_box"><img src="images/post_08.jpg" alt="전시포스터"></div>
                 <h4 class="dp_tit">전시제목</h4>
                 <p class="date">날짜</p>
               </a>
@@ -212,45 +292,48 @@
       <h2 class="title">온라인미술관</h2>
         <div class="box">
           <div class="slider-nav slider">
-            <div><img src="images/post_04.jpg"></div>
-            <div><img src="images/post_05.jpg"></div>
-            <div><img src="images/post_07.jpg"></div>
+            <div><img src="images/post_04.jpg" alt="온라인미술관포스터"></div>
+            <div><img src="images/post_05.jpg" alt="온라인미술관포스터"></div>
+            <div><img src="images/post_07.jpg" alt="온라인미술관포스터"></div>
           </div>
-          <div class="slider-for slider">
-            <div>
-              <h4>[오디오] 《경이로운 전환》</h4>
-              <p class="date">기간: 2022. 04. 18 ~ 2022. 08. 05</p>
-              <p>어떤 위기가 시대적 조건을 통해 다른 위기를 강화함으로써 변화ㆍ상승해나가는 세계의 운동과 그에 따른 인간의 변화ㆍ하강 구조를 감각ㆍ인식하게 하는 전시<br><br>
-              참여작가: 강민기, 강태훈, 권은비, 김정근, 이승훈, 임영주, 저우위정, 호루이안
-              </p>
-            </div>
-            <div>
-              <h4>[오디오]  Tobias REHBERGER 
-                《Your self is sometimes a place to call your own》
-                </h4>
-              <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
-              <p>부산현대미술관은 개관을 맞이하여 미술관의 비전과 목표를 제시할 수 있는 국제전의 일환으로 <br>
-                <토비아스 레베르거: 가끔이나마 내 마음대로 할 수 있는 곳은 나 자신뿐이다>展을 개최합니다.<br>
-                ​더불어 부산현대미술관은 국내외 동시대미술의 독창적인 매체 사용과 장르적 변화, 다양한 기능의
-                결합에 주목하였습니다.<br><br> 이번 전시는 이러한 동시대미술의 특징적 흐름에 따라 기획되었으며
-                장소 특정적이며 예술의 복합적 기능이 내재된 새로운 형태의 조각 작품을 선보입니다.
-              </p>
-            </div>
-            <div>
-              <h4>[VR] 개인들의 사회</h4>
-              <p class="date">기간: 2022. 05. 30 ~ 2022. 09. 20</p>
-              <p>
-                우리 시대 개인들이 처한 다양한 모습을 통해 우리가 살아가고 있는 오늘날의 사회란 어떤 모습인지 생각해보는 주제의 기획전시 입니다.<br>
-                <br>
-                참여작가: 송세진, 하룬 파로키, 마이클 맨디버그, 류성실, 임봉호, 서평주, 손혜경, 이우성
-              </p>
+          <div class="for-btn">
+            <div class="slider-for slider">
+              <div>
+                <h4>[오디오] 《경이로운 전환》</h4>
+                <p class="date">기간: 2022. 04. 18 ~ 2022. 08. 05</p>
+                <p>어떤 위기가 시대적 조건을 통해 다른 위기를 강화함으로써 변화ㆍ상승해나가는 세계의 운동과 그에 따른 인간의 변화ㆍ하강 구조를 감각ㆍ인식하게 하는 전시<br><br>
+                참여작가: 강민기, 강태훈, 권은비, 김정근, 이승훈, 임영주, 저우위정, 호루이안
+                </p>
+              </div>
+              <div>
+                <h4>[오디오]  Tobias REHBERGER 
+                  《Your self is sometimes a place to call your own》
+                  </h4>
+                <p class="date">기간: 2022. 04. 01 ~ 2022. 07. 01</p>
+                <p>부산현대미술관은 개관을 맞이하여 미술관의 비전과 목표를 제시할 수 있는 국제전의 일환으로 <br>
+                  <토비아스 레베르거: 가끔이나마 내 마음대로 할 수 있는 곳은 나 자신뿐이다>展을 개최합니다.<br>
+                  ​더불어 부산현대미술관은 국내외 동시대미술의 독창적인 매체 사용과 장르적 변화, 다양한 기능의
+                  결합에 주목하였습니다.<br><br> 이번 전시는 이러한 동시대미술의 특징적 흐름에 따라 기획되었으며
+                  장소 특정적이며 예술의 복합적 기능이 내재된 새로운 형태의 조각 작품을 선보입니다.
+                </p>
+              </div>
+              <div>
+                <h4>[VR] 개인들의 사회</h4>
+                <p class="date">기간: 2022. 05. 30 ~ 2022. 09. 20</p>
+                <p>
+                  우리 시대 개인들이 처한 다양한 모습을 통해 우리가 살아가고 있는 오늘날의 사회란 어떤 모습인지 생각해보는 주제의 기획전시 입니다.<br>
+                  <br>
+                  참여작가: 송세진, 하룬 파로키, 마이클 맨디버그, 류성실, 임봉호, 서평주, 손혜경, 이우성
+                </p>
+              </div>
+            </div><!--for-slide-->
+            <div class="dp_btn">
+              <p><a href="#" class="audio">오디오가이드 바로가기</a></p>
+              <p><a href="#" class="vr">VR 전시 바로가기</a></p>
             </div>
           </div>
         </div><!--box-->
-        <div class="dp_btn">
-          <p><a href="#" class="audio">오디오가이드 바로가기</a></p>
-          <p><a href="#" class="vr">VR 전시 바로가기</a></p>
-          </div><!--dp_btn-->
+      <!--dp_btn-->
       </div><!--inner-->
 
   </section>
@@ -263,30 +346,30 @@
       <h2 class="title">교육프로그램</h2>
       <div class="flex">
         <p class="thum_text">부산현대미술관은 아동부터 성인, 가족단위로 즐길 수 있는 <br> 다양한 교육 프로그램과  가정에서도 참여할 수 있는 온라인 프로그램을 <br> 제공하고 있습니다.</p>
-        <div class="all">
-          <ul class="thum_list">
+        <div class="all"> 
+          <ul class="thum_list">  
             <li>
-              <a href="#"><img src="images/post_05.jpg"></a>
+              <a href="#"><img src="images/post_05.jpg" alt="교육프로그램포스터"></a>
               <h4>프로그램제목</h4>
               <p>프로그램 설명</p>
             </li>
             <li>
-              <a href="#"><img src="images/post_05.jpg"></a>
+              <a href="#"><img src="images/post_05.jpg" alt="교육프로그램포스터"></a>
               <h4>프로그램제목</h4>
               <p>프로그램 설명</p>
             </li>
             <li>
-              <a href="#"><img src="images/post_05.jpg"></a>
+              <a href="#"><img src="images/post_05.jpg" alt="교육프로그램포스터"></a>
               <h4>프로그램제목</h4>
               <p>프로그램 설명</p>
             </li>
             <li>
-              <a href="#"><img src="images/post_05.jpg"></a>
+              <a href="#"><img src="images/post_05.jpg" alt="교육프로그램포스터"></a>
               <h4>프로그램제목</h4>
               <p>프로그램 설명</p>
             </li>
             <li>
-              <a href="#"><img src="images/post_05.jpg"></a>
+              <a href="#"><img src="images/post_05.jpg" alt="교육프로그램포스터"></a>
               <h4>프로그램제목</h4>
               <p>프로그램 설명</p>
             </li>
@@ -325,20 +408,20 @@
             <p class="title">팝업존</p>
             <section class="lazy3 slider">
               <div>
-                <img src="images/banner_01.jpg">
+                <img src="images/banner_01.jpg" alt="배너1">
               </div>
               <div>
-                <img src="images/banner_02.jpg">
+                <img src="images/banner_02.jpg" alt="배너2">
               </div>
               <div>
-                <img src="images/banner_03.jpg">
+                <img src="images/banner_03.jpg" alt="배너3">
               </div>
             </section>
           </div>
         </div>
         <div class="map2">
           <p class="title">오시는길</p>
-          <div id="map" style="width:100%;height:500px;">
+          <div id="map" style="width:100%;height:695px;">
          
           </div><!--map-->
         </div>
@@ -351,7 +434,7 @@
     <div class="inner">
       <div class="sec5_all">
           <div class="letter_img">
-            <p class="title"><img src="images/post_05.jpg"></p>
+            <p class="title"><img src="images/post_05.jpg"  alt="뉴스레터구독폼 이미지"></p>
           </div>
           <div class="input_form">
             <div class="letter_txt">
@@ -366,7 +449,7 @@
                 <div class="mail">
                   <input type="text" placeholder="이메일 주소 입력 (예: 아이디 @ naver.com)">
                 </div>
-                <div><button class="send" name="letter_form" >구독신청하기</button></div>
+                <div><a href="#"><button class="send" name="letter_form">구독신청하기</button></a></div>
               </div><!--form-->
               
           </div>
@@ -377,7 +460,7 @@
   <footer id="footer">
     <div class="inner">
       <div class="foot_logo">
-        <img src="images/mocalogo_01.png">
+        <img src="images/mocalogo_01.png" alt="푸터 로고">
       </div>
       <div class="foot_text">
         <p>(우 49300) 부산광역시 사하구 낙동남로 1191 (하단동) 부산현대미술관 / 전화 : 051 - 220-7400~1<br> 홈페이지의 모든 내용들은 무단 복제가 불가합니다.
@@ -387,12 +470,12 @@
         </p>
       </div>
       <div class="foot_ic">
-        <a href="#"><img src="icon/ic_blog.png"></a>
-        <a href="#"><img src="icon/ic_twitter.png"></a>
-        <a href="#"><img src="icon/ic_facebook.png"></a>
-        <a href="#"><img src="icon/ic_youtube.png"></a>
+        <a href="#"><img src="icon/ic_blog.png" alt="공식 네이버블로그 바로가기"></a>
+        <a href="#"><img src="icon/ic_twitter.png" alt="공식 트위터 바로가기"></a>
+        <a href="#"><img src="icon/ic_facebook.png" alt="공식 페이스북 바로가기"></a>
+        <a href="#"><img src="icon/ic_youtube.png" alt="공식 유튜브채널 바로가기"></a>
       </div>
-    </div><!--inner-->
+    </div><!--inner--> 
   </footer>
 </div>
 </body>
