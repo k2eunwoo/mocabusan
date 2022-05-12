@@ -328,7 +328,7 @@ transition:0.2s;}
 #section3 .date{margin-bottom:20px;}
 #section3 .img_box{display: flex; flex-direction:row; flex-wrap: nowrap; justify-content: space-between;}
 #section3 .thum_text{width:100%; margin:200px 0;}
-#section3 .all{width: 100%;}
+#section3 .all{width: 50%;}
 .thum_list:after{content: '';display: block;clear:both;}
 .thum_list li
 {box-sizing:border-box;
