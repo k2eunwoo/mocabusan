@@ -1,16 +1,92 @@
 $(function(){
+  // 모달팝업
+  $('.modal').click(function(){
+    $('#pop_up').fadeIn();
+  })
+  $('#pop_up button').click(function(){
+    $('#pop_up').fadeOut();
+  })
+// 네비게이션 아코디언
+  $('.accordion').each(function(){
+		var allDD = $(this).find('dd') // 현재 .accordion 안에 있는 모든 dd태그를 찾아 기억함. 초기 화면에서 dd태그의 컨텐츠를 모두 안보이게 하기 위함  
+		//this는 .accordion 만 선택하게 하기 위해서 사용했음
+		var allDT = $(this).find('dt') //현재 .accordion 안에 있는 모든 dt를 기억함
+		$('active').next().show();
+		
+		$(allDT).click(function(){
+			// $(allDD).slideUp();
+			$(allDD).slideUp();
+			$(this).next().slideDown();
+			$(allDT).removeClass('active'); //css의 dt.active에 있는 디자인이 클릭을 하지 않으면 실행되지 않음.
+			$(this).addClass('active'); //css의 dt.active에서 있는 디자인이 alldt에 실행됨. 
+			//아코디언은 처음부터 하나는 열려있어야함. 
+			
+ 		})//click
+	   })//each 1단계 끝! 
+
+  // 메인슬라이드
   $(".lazy").slick({
     lazyLoad: 'ondemand', // ondemand progressive anticipated
     infinite: true,
     fade:true ,  
-    speed :3000,
+    speed :2000,
     dots: true,
     autoplay:true,
-    autoplaySpeed : 500,
+    autoplaySpeed : 3000,
   });
+
+  // 슬라이드 시간차 애니메이션
+  $('.wrap').scroll(function(){
+    /********main**************/
+    if ($(this).scrollTop() >= $('.first-section').position().top - 0) {
+        $('.first-section').removeClass('show-animation');
+        $('.first-section').addClass('show-animation');
+    } 
+    else{
+        $('.first-section').removeClass('show-animation');
+    }
+});
+$(window).scroll(function(){
+  /********SECTION1**************/
+  if ($(document).scrollTop() >= $('#section1 .search .question , #section1 .search .select').position().top - 400) {
+      $('#section1 .search .question , #section1 .search .select').removeClass('show-animation');
+      $('#section1 .search .question , #section1 .search .select').addClass('show-animation');
+  } 
+  else{
+      $('#section1 .search .question , #section1 .search .select').removeClass('show-animation');
+  }
+
+ /********SECTION2**************/
+ if ($(document).scrollTop() >= $('.slider-nav , .for-btn').position().top - 400) {
+  $('.slider-nav , .for-btn').removeClass('show-animation');
+  $('.slider-nav , .for-btn ').addClass('show-animation');
+} 
+else{
+  $('.slider-nav , .for-btn').removeClass('show-animation');
+}
+if ($(document).scrollTop() >= $('.flex > p , .thum_list li , .more').position().top - 300) {
+  $('.flex > p , .thum_list li , .more').removeClass('show-animation');
+  $('.flex > p , .thum_list li , .more').addClass('show-animation');
+} 
+else{
+  $('.flex > p , .thum_list li , .more').removeClass('show-animation');
+}
+
+if ($(document).scrollTop() >= $('.letter_img , .input_form').position().top - 300) {
+  $('.letter_img , .input_form').removeClass('show-animation');
+  $('.letter_img , .input_form').addClass('show-animation');
+} 
+else{
+  $('.letter_img , .input_form').removeClass('show-animation');
+}
+});
+
+ 
+
+  //  전시슬라이드
   var swiper = new Swiper(".mySwiper", {
-    loop:false,
-    slidesPerView: 3.4,
+    // loop:true,
+    slidesPerView: 4.8,
     arrows: true,
     autoplay:false,
     spaceBetween: 50,
@@ -22,6 +98,18 @@ $(function(){
     scrollbar: {
         el: ".swiper-scrollbar",
     },
+    //centeredSlides: true, 
+   /* breakpoints: { //반응형 조건 속성
+     320: { //640 이상일 경우
+        slidesPerView: 2, //레이아웃 2열
+      },
+      760: {     
+        slidesPerView: 3,
+      },
+      1020 : {
+        slidesPerView: 4,
+      },
+    }*/
   });
 
   $('.slider-nav').slick({
@@ -114,6 +202,7 @@ $(function(){
      }
           //클릭수만큼 li 보이기
       $('.more').click(function(){
+
       click_count += 1;
       //alert(Math.ceil(li_count/4));
       if(Math.ceil(li_count/2) > click_count){
@@ -121,12 +210,15 @@ $(function(){
         li_show(click_count)
       }else if(Math.ceil(li_count/2) == click_count) {
         li_show(click_count)
-        $('.more').text('줄이기');     
+        $('.more').text('접기').css({"background-image":"url(icon/ic_fold.png)"}); 
+
       } else {
         $('.thum_list li').hide()
         click_count = 1;     
-        $('.more').text('더보기');
-        li_show(click_count)
+        $('.more').text('더보기').css({"background-image":"url(icon/ic_drop2.png)"}).hover({"background-image":"url(icon/ic_drop2.png)"});
+        li_show(click_count);
+        
+       
         }
       })
     })//전체
@@ -141,6 +233,7 @@ $(function(){
     centerMode: false,
     slidesToShow:1,
     autoplay: true, 
+    arrows: true,
   });
   
 // 팝업존
@@ -151,8 +244,11 @@ $(".lazy3").slick({
   autoplay: true,
   speed :1000,
   dots:true,
+  arrows:false,
 });
 
+var p_height = $(".pop").height()
+$("#map").height(p_height)
 // 카카오맵 지도 api
 var map;
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -177,5 +273,11 @@ marker.setMap(map);
 // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 // marker.setMap(null);    
 
+// 카카오맵 height값
+$(window).resize(function(){
+  var p_height = $(".pop").height();
+  $("#map").height(p_height)
+});
 })//ready
 
+// =============================================

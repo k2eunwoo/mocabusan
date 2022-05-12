@@ -1,0 +1,122 @@
+
+body { 
+  margin:0;
+  padding:0;
+  position: relative; 
+  width:100%;
+  height:100vh; overflow: hidden; /* 패럴랙스에 필요한 부분 */
+  }
+.wrap{ /* 패럴랙스에 필요한 부분 */
+	overflow-x: hidden; overflow-y: scroll; perspective: 8px;  perspective-origin: 0%;
+	width:100%;height:100vh; /* 패럴랙스에 필요한 부분끝 */
+}
+.Parallax img{width: 150%;}
+.container{
+	background-color: #fff; z-index:2;
+	 /* 패럴랙스에 필요한 부분 */
+	width:100%;position: absolute; top:100px; 
+	transform-origin: 0; 
+	transform: translateZ(3px) scale(0.625); /* 패럴랙스에 필요한 부분 끝*/
+}
+.our-work-wrapper{display: flex;flex-direction: row;
+			                flex-wrap: wrap;position: relative;
+											padding: 100px;
+ }		
+.our-work-wrapper .image-section{position: relative;width:50%;}
+.our-work-wrapper .image-section img {
+		    width: 100%;
+}
+.our-work-wrapper .text-wrapper {
+		    width: 50%;padding:100px;box-sizing: border-box;
+				position: relative;
+}
+/*****First Section Circle Shape*******/
+.first-section h3 {
+			position: absolute;
+			right: 50%;opacity: 0;
+			top: 0px;
+			transition: 1s right, 2s opacity;
+}
+.first-section.show-animation h3 {
+			right:80%;
+			opacity: 1;
+}
+.first-section .image-section img{
+		transform: translate(-30%,0);
+		opacity: 0;
+		transition: 1s transform, 2s opacity;
+}
+.first-section.show-animation .image-section img{
+		transform: translate(0,0);
+		opacity: 1;
+}
+		/***********************/
+
+
+		/*****Second Section Circle Shape*******/
+.second-section h3 {
+		    position: absolute;
+		    left: 50%;opacity: 0;
+		    top: 0px;
+				transition: 1s left, 2s opacity;
+}
+.second-section.show-animation h3 {
+		    left:80%;
+		    opacity: 1;
+		}
+.second-section .image-section img{
+			transform: translate(50%,0);
+			opacity: 0;
+			transition: 1s transform, 2s opacity;
+}
+.second-section.show-animation .image-section img{
+			transform: translate(0,0);
+			opacity: 1;
+}
+		/***********************/ 
+
+
+	/*****third Section Circle Shape*******/
+.third-section h3 {
+		position: absolute;
+		right: 50%;opacity: 0;
+		top: 0px;
+		transition: 1s right, 2s opacity;
+}
+.third-section.show-animation h3 {
+		right:80%;
+		opacity: 1;
+}
+.third-section .image-section img{
+	transform: translate(-30%,0);
+	opacity: 0;
+	transition: 1s transform, 2s opacity;
+}
+.third-section.show-animation .image-section img{
+	transform: translate(0,0);
+	opacity: 1;
+}
+	/***********************/
+
+
+	/*****fourth Section Circle Shape*******/
+.fourth-section h3 {
+			position: absolute;
+			left: 50%;opacity: 0;
+			top: 0px;
+			transition: 1s left, 2s opacity;
+}
+.fourth-section.show-animation h3 {
+			left:80%;
+			opacity: 1;
+}
+.fourth-section .image-section img{
+		transform: translate(50%,0);
+		opacity: 0;
+		transition: 1s transform, 2s opacity;
+}
+.fourth-section.show-animation .image-section img{
+		transform: translate(0,0);
+		opacity: 1;
+}
+	/***********************/ 

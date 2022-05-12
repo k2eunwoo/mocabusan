@@ -7,7 +7,10 @@
 @font-face { font-family :NotoSansKR;  font-weight:300;  
                 src : url(../font/NotoSansKR-Regular.woff);} 
 @font-face { font-family :NotoSansKR-bold;  font-weight:600;  
-                  src : url(../font/NotoSansKR-bold.woff);} 
+                  src : url(../font/NotoSansKR-bold.woff);}
+@font-face { font-family :NotoSansKR-black;  font-weight:700;  
+                  src : url(../font/NotoSansKR-Black.woff);} 
+                  
 @font-face { font-family :poppins-extrabold;  font-weight:600;  
                   src : url(../font/Poppins-ExtraBold.woff);}         
  @font-face { font-family :poppins;  font-weight:400;  
@@ -19,8 +22,16 @@
 html{font-size:16px;}
 body{ font-size:16px;
       color:#0F0F10;
-      font-family: 'NotoSansKR', sans-serif;}
-.inner {width:100%; max-width:1440px; min-width:1300; margin: 0 auto;}
+      font-family: 'NotoSansKR', sans-serif;
+      /* max-width: 100%;
+      overflow-x: hidden; */
+      /* overflow-X: hidden;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; */
+}
+.inner {width:100%; max-width:1440px; margin: 0 auto;}
 ul, ol, li{list-style-type:none}
 img, fieldset{border:none;vertical-align: middle}
 /* vertical-align은 html 입력 시 자동으로 나오는 텍스트 위치를 지정해줌. */
