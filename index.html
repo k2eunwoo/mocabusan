@@ -14,9 +14,9 @@
 <!-- 공통css -->
 <link rel="stylesheet" type="text/css" href="./css/slick.css">
 <!-- 슬릭슬라이드 css -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="./css/swiperbundle.css"/>
 <!-- 스와이퍼 슬라이드 css -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="./css/picker.css">
 <!-- 날짜픽커 css -->
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/media.css" rel="stylesheet" type="text/css">
@@ -29,12 +29,12 @@
 <!-- 하위버전도 작동하게 하는 제이쿼리 -->
 <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
 <!-- 슬릭 플러그인 -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+<script src="./js/swiperbundle.js"></script> 
 <!--메인슬라이드 플러그인-->
 <script src="js/jquery-ui.js"></script> 
 <!--날짜픽커-->
-<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=92cb805b71f02e360ef8dea57f5346a7"></script>
-<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript" src="./js/kakaomap_01.js"></script>
+<script type="text/javascript" src="./js/kakaomap_02.js"></script>
 <!-- 카카오맵 api + 라이브러리 설치파일 -->
  <!-- Botstrap 패럴렉스-->	
  <script  src="./js/script.js"></script>
@@ -354,7 +354,7 @@
   <section id="section3">
     <div class="inner">
         <div class="flex show-animation">
-          <div class="hang">
+          <div class="explain">
             <h2 class="title">교육프로그램</h2>
             <p class="thum_text">부산현대미술관은 아동부터 성인, 가족단위로 즐길 수 있는 <br> 다양한 교육 프로그램과  가정에서도 참여할 수 있는 온라인 프로그램을 <br> 제공하고 있습니다.</p>
           </div>
@@ -456,14 +456,17 @@
               <p>각종 전시회 정보와 흥미로운 읽을거리들을 메일로 보내드릴게요.</p>
             </div>
               <div class="form">
-                <h6>뉴스레터 구독서비스 신청</h6>
-                <div class="name">
-                  <input type="text" placeholder="이름/ 닉네임 입력(최대 10자)">
+                <div class="form_txt">
+                  <h6>뉴스레터 구독서비스 신청</h6>
+                  <div class="name">
+                    <input type="text" placeholder="이름/ 닉네임 입력(최대 10자)">
+                  </div>
+                  <div class="mail">
+                    <input type="text" placeholder="이메일 주소 입력 (예: 아이디 @ naver.com)">
+                  </div>
+                  <div><a href="#"><button class="send" name="letter_form">구독신청하기</button></a></div>
                 </div>
-                <div class="mail">
-                  <input type="text" placeholder="이메일 주소 입력 (예: 아이디 @ naver.com)">
-                </div>
-                <div><a href="#"><button class="send" name="letter_form">구독신청하기</button></a></div>
+               
               </div>
           </div><!--form-->
       </div><!--sec5 all-->
