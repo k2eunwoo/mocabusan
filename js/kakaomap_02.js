@@ -1,0 +1,1 @@
+{"errorType":"AccessDeniedError","message":"wrong appKey(APIKEY) format"}
