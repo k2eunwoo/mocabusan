@@ -1,4 +1,7 @@
 $(function(){
+  var p_height = $(".pop").height()
+  $("#map").height(p_height);
+
   // 모달팝업
   $('.modal').click(function(){
     $('#pop_up').fadeIn();
@@ -247,8 +250,7 @@ $(".lazy3").slick({
   arrows:false,
 });
 
-var p_height = $(".pop").height()
-$("#map").height(p_height)
+
 // 카카오맵 지도 api
 var map;
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
