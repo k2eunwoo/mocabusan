@@ -22,7 +22,7 @@ button{cursor:pointer;}
 #header .menu ul li:nth-child(3) .nav_logo img {width:100%;}
 
 /* 유저 로그인 */
-.user{width:35%; margin:150px 0 0 0; text-align: center;}
+.user{ margin:150px 0 0 0; text-align: center;}
 .user div {margin-bottom:50px;}
 .user div .pro{display:block; width:150px; height:150px;margin:50px auto;border-radius:150px; background-color: #4B4B4B;background-image:url('../images/profile.jpg'); background-size:100%;}
 .user .pro2{font-size:1.2rem; font-weight:700;}
@@ -36,12 +36,35 @@ button{cursor:pointer;}
 .user dd{color:#4B4B4B;}
 .user dd:last-child::after {content:''; display:block; width:300px; height:2px;background-color:#7E7E87; margin:20px auto;}
 
-/* 네비게이션 아코디언 */
-.nav-accod {display:flex; flex-direction: row; flex-wrap:nowrap; justify-content:space-between; }
-dl.accordion{margin:auto 0;}
-.nav_left , .nav_right {width:35%;}
-.nav_right {margin-left:-50px;}
-.accordion dt{
+
+.nav-accod .m_nav{
+  padding:50px;
+}
+#wrap_head {
+  display:flex; 
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  }
+#wrap_head #btn1 , #wrap_head #btn2{
+  display:flex;
+   flex-direction:column;
+   flex-wrap:wrap; 
+   justify-content:space-around;
+}
+#wrap_head #btn1{
+  margin-right: 200px;
+}
+
+/* 모달 팝업 속 네비게이션 디자인 */
+#header .nav-accod{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+#btn1 ul , #btn2 ul{display:none}
+#wrap_head #btn1 > li , #wrap_head #btn2 > li{
   font-family:NotoSansKR-black;
 	font-size:2.8rem;
   font-weight:700;
@@ -54,17 +77,15 @@ dl.accordion{margin:auto 0;}
 	border-radius:3px;
 	margin:80px 0 20px 0px;
 }
-.accordion dd{
-  text-align:center;
-	font-size:1.2rem;	
-  font-weight:100;
-	color:#777777;
-	/* background:#fff; */
-	margin:0 0 2px;
-	display:none;
+#wrap_head #btn1 > li .sub , #wrap_head #btn2 > li .sub{
+  font-size:1.2rem;
+  color:#777;
+  font-weight:300;
 }
-.accordion dd a {display: block; padding:5px; text-align: center;}
-.accordion dt:hover , .user dt:hover {color: #424383;}
+#wrap_head #btn1 > li .sub li{
+  padding:5px;
+}
+
 /*================ navigation end ====================*/
 
 
@@ -75,7 +96,7 @@ dl.accordion{margin:auto 0;}
     flex-wrap: nowrap;
     justify-content:space-between;
 }
-#header .menu ul{
+#header .menu .m_ul{
     display: flex;
     flex-direction:row;
     flex-wrap: nowrap;
@@ -237,8 +258,33 @@ dl.accordion{margin:auto 0;}
 #section1 .search{margin: 0 auto;}
 #section1 .search .inner > p{font-size:1.2rem; font-weight:600;text-align: center; margin-bottom: 30px;}
 #section1 .search .inner .thin2{font-size:1rem;font-weight:100;}
-#section1 .price{position:relative;display:flex; flex-direction: row; flex-wrap:nowrap; justify-content:center;}
-#section1 .price select{border:none;background:none;appearance:none;outline:none;}
+
+#section1 .search_bar input{ border:none; width:400px; background:#EAEAEA; margin-left:30px;outline: none;position:relative;}
+#section1 .search_bar button{padding:15px 30px; background: #424383 ;
+border:none;
+border-radius:10px;
+color:#fff;
+margin-right:0;}
+
+#section1 .search_bar::before{content:''; display:block;background:url('../icon/ic_won.svg')no-repeat center; background-size:100%; width:50px; height:50px;}
+
+#section1 .search_bar button:hover{color:#424383;background: #bdbeeb}
+
+#section1 .price{
+  width:150px;
+  border:none;
+  background:none;
+  /* padding:15px 40px 15px 60px;   */
+  appearance:none; /*select 기본 화살표모양 없애기*/
+  outline:none;
+  text-align:left;
+  font-size:0.9rem;
+  margin:auto 0;
+  position:relative;
+}
+#section1 .price p{padding:0 10px;content:''; display:block;background:url('../icon/ic_drop.png') no-repeat; background-position:100px;}
+#section1 .price ul{background:#fff; position:absolute;padding:0 10px;top:40px;border:1px solid#ddd;display:none;}
+#section1 .price ul li{padding:10px;}
 #section1 .search_bar{
     background:#EAEAEA;
     width:680px;
@@ -251,29 +297,6 @@ dl.accordion{margin:auto 0;}
     flex-wrap: nowrap;
     justify-content:space-between;
 }
-#section1 .search_bar input{ border:none; width:400px; background:#EAEAEA; margin-left:30px;outline: none;}
-#section1 .search_bar button{padding:15px 30px; background: #424383 ;
-border:none;
-border-radius:10px;
-color:#fff;
-margin-right:0;}
-
-#section1 .search_bar::before{content:''; display:block;background:url('../icon/ic_won.svg')no-repeat center; background-size:100%; width:50px; height:50px;}
-#section1 .price::after{content:''; display:block;background:url('../icon/ic_drop.png') no-repeat right;
-width:50px; height:50px;z-index:9999;}
-
-#section1 .price{
-  border:none;
-  background:none;
-  /* padding:15px 40px 15px 60px;   */
-  appearance:none; /*select 기본 화살표모양 없애기*/
-  outline:none;
-  text-align:left;
-}
-
-#section1 .price {font-size:0.9rem;}
-#section1 .search_bar button:hover{color:#424383;background: #bdbeeb}
-
 
 #section1 .d_picker{border-radius:15px; width:300px; padding:15px;background:#EAEAEA;}
 #section1 .d_picker input{width:150px; border:none; outline: none; background:#EAEAEA;text-align:center;margin:auto 0;}
@@ -322,7 +345,7 @@ transition:0.2s;}
 /* ==========================section2 end============================== */
 
 /* ==========================section3 ============================== */
-#section3 {margin-bottom:200px;}
+#section3 {margin-bottom:100px;}
 #section3 .explain {display: flex; flex-direction: column;}
 #section3 .flex{display:flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;}
 #section3 .title{margin-bottom:100px;}
@@ -383,7 +406,7 @@ width:50%;
 #section4 .slick-dots {
 display:flex; flex-direction:row; flex-wrap:nowrap; justify-content: flex-end; position:absolute; top:30px; right:30px;}
 #section4 .slick-dots button{background:none; border:2px solid #c4c4c4; border-radius:15px; width:10px; height:10px; font-size:0; margin:0 5px;}
-#section4 #map{border-radius: 30px;width:100%;}
+#section4 #map{border-radius: 30px;width:100%;height:100%;}
 #section4 .slick-active button{background-color: #c4c4c4; }
 #section4 .vertical-center{width: calc(100% - 128px - 100px);}
 

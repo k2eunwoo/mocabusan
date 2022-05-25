@@ -10,20 +10,18 @@
   <!--[if lt IE 9]>
       <script src="js/html5.js"></script>
    <![endif]-->
-<link href="css/common.css" rel="stylesheet" type="text/css">
-<!-- 공통css -->
+
 <link rel="stylesheet" type="text/css" href="./css/slick.css">
 <!-- 슬릭슬라이드 css -->
 <link rel="stylesheet" href="./css/swiperbundle.css"/>
 <!-- 스와이퍼 슬라이드 css -->
 <link rel="stylesheet" href="./css/picker.css">
 <!-- 날짜픽커 css -->
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<!-- 공통css -->
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/media.css" rel="stylesheet" type="text/css">
 <!-- 개인 수정용 css /반응형 -->
-
-
-
 
 <!-- js파일 -->
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -40,25 +38,27 @@
 <!-- 카카오맵 api + 라이브러리 설치파일 -->
  <!-- Botstrap 패럴렉스-->	
  <script  src="./js/script.js"></script>
+ <script src="./js/common.js"></script>
 <script src="./js/main.js"></script>
 <!-- 개인 수정용 -->
 
 </head>  
 
 <body>
-<div id="wrap">
+  <div id="wrap">
   <header id="header">
     <div>
       <h1><a href="#"><img src= "images/mocalogo_02_w.png" alt="홈으로 돌아가는 logo 버튼"></a></h1>
       <nav class="menu">
-        <ul>
+        <ul class="m_ul">
           <li class="icon"><a href="#" ><img src="icon/ic_lang_ko.svg"><span>언어선택</span></a></li>
           <li class="icon"><a href="#" ><img src="icon/ic_login.svg"><span>언어선택</span></a></li>
           <li class="icon">
             <div><a href="#" class="modal"><img src="icon/ic_menu.svg"></a></div>
-              <div id="pop_up">
+            <div id="pop_up">
                 <div class="img">
-                  <div class="nav_logo"><img src="images/mocalogo_02.png"></div>
+                  <div class="inner">
+                    <div class="nav_logo"><img src="images/mocalogo_02.png"></div>
                   <div class="btn"><button><span>닫기</span></button></div>
                   <div class="nav-accod">
                     <dl class="user"><!--user login 시작-->
@@ -69,66 +69,83 @@
                       <dt><a href="#">FAQ</a></dt>
                       <dt><a href="#">Q&A</a></dt>
                     </dl><!--user login 끝-->
-
-                    <!--nav 아코디언 시작-->
-                    <dl class="accordion nav_left"> 
-                    <dt class="active">MOCA BUSAN</dt>
-                      <dd>
-                        <a href="#">연혁</a>
-                        <a href="#">조직도</a>
-                        <a href="#">관련법령</a>
-                      </dd>
-                    <dt>이용안내</dt>
-                    <dd>
-                      <a href="#">관람안내</a>
-                      <a href="#">층별안내</a>
-                      <a href="#">단체관람 안내</a>
-                      <a href="#">전시관람 안내</a>
-                      <a href="#">대관안내</a>
-                      <a href="#">오시는길</a>
-                    </dd>
-                    <dt>전시</dt>
-                    <dd>
-                      <a href="#">현재전시</a>
-                      <a href="#">예정전시</a>
-                      <a href="#">지난전시</a>
-                    </dd>
-                    <dt>교육프로그램</dt>
-                    <dd>
-                      <a href="#">프로그램</a>
-                      <a href="#">자료실</a>
-                    </dd>
-                  </dl><!-- 아코디언 왼쪽-->
-                  <dl class="accordion nav_right">
-                    <dt>소장품</dt>
-                    <dd>
-                      <a href="#">소장품 보기</a>
-                      <a href="#">모카이브</a>
-                    </dd>
-                    <dt>MOCA 소식</dt>
-                    <dd>
-                      <a href="#">공지사항</a>
-                    </dd>
-                    <dt>책그림섬</dt>
-                    <dd>
-                      <a href="#">소개</a>
-                      <a href="#">이용예약</a>
-                      <a href="#">프로그램</a>
-                      <a href="#">소식</a>
-                    </dd>
-                    <dt>온라인 예약</dt>
-                    <dd>
-                      <a href="#">견학/체험</a>
-                      <a href="#">강좌/교육</a>
-                      <a href="#">대관/대여</a>
-                      <a href="#">행사/모집</a>
-                      <a href="#">나의예약현황</a>
-                    </dd>
-                  </dl> <!-- 아코디언 오른쪽-->
-                </div><!--로그인창/nav-accord-->
-               </div><!--팝업 이미지, 팝업 이미지 위에 아코디언 네비게이션 항목이 보여야 하므로 popup_img 태그 내에 아코디언 태그를 넣어줌.-->
+                    <div class="m_nav">
+                      <div id="wrap_head">
+                        <ul id="btn1">
+                          <li><a href="#">MOCA BUSAN</a>
+                              <ul class="sub">
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">관련법령</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">이용안내</a>
+                              <ul class="sub">
+                                <li><a href="#">관람안내</a>
+                                </li>
+                                <li><a href="#">층별안내</a>
+                                </li>
+                                <li><a href="#">단체관람 안내</a>
+                                </li>
+                                <li><a href="#">전시관람 안내</a>
+                                </li>
+                                <li><a href="#">대관안내</a>
+                                </li>
+                                <li><a href="#">오시는길</a>
+                                </li>
+                              </ul>
+                          </li>
+                          <li><a href="#">전시</a>
+                              <ul class="sub">
+                                <li><a href="#">현재전시</a></li>
+                                <li><a href="#">예정전시</a></li>
+                                <li><a href="#">지난전시</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">교육프로그램</a>
+                              <ul class="sub">
+                                <li><a href="#">프로그램</a></li>
+                                <li><a href="#">자료실</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                        <ul id="btn2">
+                          <li><a href="#">소장품</a>
+                              <ul class="sub">
+                                <li><a href="#">소장품 보기</a></li>
+                                <li><a href="#">모카이브</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">MOCA 소식</a>
+                              <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">책그림섬</a>
+                              <ul class="sub">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">이용예약</a></li>
+                                <li><a href="#">프로그램</a></li>
+                                <li><a href="#">소식</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">온라인 예약</a>
+                              <ul class="sub">
+                                <li><a href="#">견학/체험</a></li>
+                                <li><a href="#">강좌/교육</a></li>
+                                <li><a href="#">대관/대여</a></li>
+                                <li><a href="#">행사/모집</a></li>
+                                <li><a href="#">나의예약현황</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                      </div><!--wrap_head-->
+                  </div><!--m_nav-->
+                  </div>
+                  
+               </div><!--팝업 이미지, .nav-accod 팝업 이미지 위에 아코디언 네비게이션 항목이 보여야 하므로 popup_img 태그 내에 아코디언 태그를 넣어줌.-->
               </div><!--팝업 끝-->
-              
+            </div><!--pop_up-->
            </li>
         </ul>
       </nav>        
@@ -280,12 +297,12 @@
             <div><input type="text" id="datepicker"></div>
            </div>
            <div class="search_bar">
-             <p class="price">
-              <select>
-                <option value=>무료전시</option>
-                <option value=>유료전시</option>
-              </select>
-             </p>
+             <div class="price">
+              <p class="free">무료전시</p>
+              <ul class="pay">
+                <li class="on">유료전시</li>
+              </ul>
+            </div>
              <input type="search" placeholder="전시 제목이나 내용을 입력해주세요."><button>GO!</button>
            </div> 
         </div>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#header{background:url('../images/background_01.jpg') no-repeat;}
+#header .menu {}
+#header .menu ul{display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; }
+#header .head_box {display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between;
+}
+#header .menu_ic{}
+#header .menu_ic .ul{display:flex; flex-direction:row; flex-wrap:wrap; justify-content:flex-end;}
+#header .menu_ic li{width:30px;height:30px;}

@@ -1,0 +1,316 @@
+ @charset "utf-8";
+
+/* 공통 */ 
+h2 {font-family:NotoSansKR-bold;font-weight:600;font-size: 2rem;margin-bottom:100px;}
+#wrap {width:100%;overflow:hidden;}
+/* 팝업창 열기 */
+#pop_up{
+    width:100%; height:100%; position:fixed; 
+    left:0; top:0; background:rgba(0,0,0, 0.6);
+     z-index:99; display:none;}/*뒷 배경*/
+  #pop_up .img{
+    width:100%; height:100%;
+    position:fixed; left:50%; top:50%; transform:translate(-50%,-50%);  background:#d6d6d4; text-align:center;}  /* 네비게이션 팝업창 배경 */
+  #pop_up .img img{display:block; padding:20px;}
+  button{cursor:pointer;}
+  #pop_up .btn{text-align:center; position:absolute; top:50px; right:115px;}
+  #pop_up .btn button{display:block;margin:0 auto;  padding:6px 12px; border:none; color:#FAF9F8;
+    background:url('../icon/ic_close.svg') 80% no-repeat; 
+  }
+  #pop_up .btn button span{font-size:0;}
+  .modal{display:block; margin-bottom:50px; width:100%;} 
+  #header .menu ul li:nth-child(3) .nav_logo{position: absolute; top:35px; left:90px; width:285px; z-index:9999;}
+  #header .menu ul li:nth-child(3) .nav_logo img {width:100%;}
+  
+  /* 유저 로그인 */
+  .user{ margin:150px 0 0 0; text-align: center;}
+  .user div {margin-bottom:50px;}
+  .user div .pro{display:block; width:150px; height:150px;margin:50px auto;border-radius:150px; background-color: #4B4B4B;background-image:url('../images/profile.jpg'); background-size:100%;}
+  .user .pro2{font-size:1.2rem; font-weight:700;}
+  .user dt{
+    text-align:center;
+    font-family:poppins-extrabold;
+      font-size:2.8rem;
+    font-weight:600;
+      color:#7E7E87;
+    padding:10px 0;}
+  .user dd{color:#4B4B4B;}
+  .user dd:last-child::after {content:''; display:block; width:300px; height:2px;background-color:#7E7E87; margin:20px auto;}
+  
+  
+  .nav-accod .m_nav{
+    padding:50px;
+  }
+  #wrap_head {
+    display:flex; 
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    }
+  #wrap_head #btn1 , #wrap_head #btn2{
+    display:flex;
+     flex-direction:column;
+     flex-wrap:wrap; 
+     justify-content:space-around;
+  }
+  #wrap_head #btn1{
+    margin-right: 200px;
+  }
+
+
+  
+  /* 모달 팝업 속 네비게이션 디자인 */
+  #header .nav-accod{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  #btn1 ul , #btn2 ul{display:none}
+  #wrap_head #btn1 > li , #wrap_head #btn2 > li{
+      font-family:NotoSansKR-black;
+      font-size:2.8rem;
+      font-weight:700;
+      text-align:center;
+      color:#0F0F10;
+      background-image:url(images/arrow_down.png);
+      background-repeat:no-repeat;
+      background-position:95% center;
+      padding:0px 10px;
+      border-radius:3px;
+      margin:80px 0 20px 0px;
+  }
+  #wrap_head #btn1 > li .sub , #wrap_head #btn2 > li .sub{
+    font-size:1.2rem;
+    color:#777;
+    font-weight:300;
+  }
+  #wrap_head #btn1 > li .sub li{
+    padding:5px;
+  }
+
+  
+/* =========================NAVIGATION END========================= */
+/* header */
+ #header {
+     background: url('../images/intro_01.jpg') no-repeat;
+    background-size:cover;
+    padding-left:100px;
+    padding-right:100px;
+    padding-top:50px;
+    margin-bottom:50px;
+    height: 600px;
+    margin:0 auto;
+    margin-bottom:200px;
+}
+
+#header .intro_tit{
+    font-family: poppins-extrabold;
+     font-weight:600;
+     font-size:3rem;/*48px*/
+     color:#ffffff;
+     position:absolute;
+     right:10%;
+     top:30%;
+    }
+
+#header h1 img {width:100%;}
+#header .head_box{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+}
+
+
+#header .menu{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+#header .menu ul{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+#header .menu li{padding:0 30px; font-weight:700; color:#fff;}
+
+#header .menu_ic ul{
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+#header .menu_ic li {padding:0 20px;}
+ #header .menu_ic img{
+     width:30px;
+    }
+
+
+ /* =====================section1 시작======================= */
+#section1, #section2, #section3, #section4 {margin-bottom:200px;}
+#section1 h3, #section2 h3, #section3 h3, #section4 h3 {margin-bottom:50px;}
+
+#section1 .cont_box, #section2 .cont_box, #section3 .cont_box, #section4 .cont_box
+{line-height:25px;}
+
+
+
+#section1 .bread{
+    text-align: left;
+    margin-bottom:50px;
+    border-bottom:1px solid#000;
+    padding-bottom:30px;
+}
+#section1 .bread a:last-child {font-weight:700;}
+
+#section1 .bread a:hover{text-decoration: underline;font-weight:700;}
+
+#section1 .cont_box img{width:100%;    }
+#section1 .cont_box h3 , #section1 .cont_box p:nth-child(3){margin-bottom:50px;}
+#section1 .cont_box p{padding:10px;}
+
+#section1 .flex {display:flex; flex-direction:row;flex-wrap: wrap; justify-content:space-between;}
+
+#section1 .img_box {
+    overflow: hidden;
+    border-radius:30px; 
+    width:700px;
+    margin-top:100px;
+}
+#section1 .img_box img{width:100%; height:100%;}
+
+/* ===================section2==================*/
+#section2{margin-bottom:200px;}#section2 .flex{
+    display:flex; 
+    flex-direction:row; 
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+#section2 .img_box img{width:100%;}
+#section2 .cont_box{width:50%;}
+#section2 .cont_box h2 {margin-bottom:100px;}
+#section2 .cont_box h3 {margin-bottom:50px;}
+#section2 .cont_box p{padding:10px;}
+/* ===================section2 끝==================*/
+
+/* ===================section3==================*/
+#section3 .flex {display:flex; flex-direction:row;flex-wrap: wrap; justify-content:space-between;}
+
+/* 
+#section3 .img_box3 img{
+    width:100%;
+} */
+/* ===================section3끝==================*/
+
+
+/* ===================section4==================*/
+#section4 .cont_box {
+  display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between;
+}
+/* ===================section4끝==================*/
+
+
+#footer {background-color:#C4C4C4; padding:50px 0;}
+#footer .inner{display: flex; flex-direction:row; flex-wrap:nowrap; justify-content: space-between;}
+/* #footer .foot_logo , #footer .foot_text , #footer .foot_ic{width:30%;} */
+#footer .foot_logo img{width:80%;}
+#footer .foot_text p:first-child{margin-bottom: 45px;}
+#footer .foot_text p:last-child{color: #4f4f4f;}
+#footer .foot_ic {margin-top:80px;}
+#footer .foot_ic a{padding:0 5px;}
+
+/* 섹션 시간차 애니메이션 */
+
+
+#section1 .cont_box, #section1 h2 {
+  transform: translate(-30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+/*원본: 1)-30%만큼 이동해서 움직이려는 오브젝트를 화면 밖으로 이동시킨다.*/
+
+#section1 .cont_box.show-animation , #section1 h2.show-animation  {
+  transform: translate(0,0);
+  opacity: 1;
+}
+/* 2).show-animation이 붙은 클래스는 다시 원래 자리로 돌아오게 된다. (transition의 효과)  */
+
+#section1 .img_box{
+  transform: translate(30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section1 .img_box.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+/*===================== section1 end ==============*/
+
+#section2 .cont_box, #section2 h2{
+  transform: translate(30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section2 .cont_box.show-animation , #section2 h2.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+#section2 .img_box{
+  transform: translate(-30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section2 .img_box.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+/*===================== section2 end ==============*/
+#section3 .cont_box, #section3 h2{
+  transform: translate(-30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section3 .cont_box.show-animation , #section3 h2.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+#section3 .img_box{
+  transform: translate(30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section3 .img_box.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+/*===================== section3 end ==============*/
+
+#section4 .txt_box, #section4 h2{
+  transform: translate(30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section4 .txt_box.show-animation , #section4 h2.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+#section4 .img_box{
+  transform: translate(-30%,0);
+  opacity: 0;
+  transition: 2s transform, 2s opacity;
+}
+#section4 .img_box.show-animation {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+
